@@ -12,10 +12,10 @@ export class HomePage {
   reviews: any;
  
   constructor(public nav: NavController, public reviewService: Reviews, public modalCtrl: ModalController) {
- 
+    this.reviews = []; 
   }
  
-  ionViewDidLoad(){ 
+  ionViewDidLoad(){     
     this.reviewService.getReviews().then((data) => {
       console.log(data);
       this.reviews = data;
